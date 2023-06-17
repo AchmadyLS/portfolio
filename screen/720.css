@@ -1,0 +1,72 @@
+@media screen and (max-width: 720px) {
+    * html {
+        width: 720px;
+    }
+    /*  NAVBAR  */
+    .navbar {
+        display: flex;
+        position: fixed;
+        align-items: center;
+        flex-direction: row;
+        gap: 40px;
+        top: 32;
+        left: 50%;
+        font-family: 'Roboto';
+        font-size: 22px;
+        font-weight: bold;
+        transform: translate(-50%, -50%);
+        padding: 10px 20px;
+        z-index: 999;
+        transition: opacity 1s ease-in-out;
+    }
+    /*  HEADER  */
+    .back-nama{
+        position: fixed;
+        background-color: #1a1a1a;
+        top: 0;
+        left: -10;
+        right: -10;
+        bottom: 380px;
+        border: 2px solid;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        transition: bottom 1s ease-in-out;
+    }
+    .nama {
+        text-align: center;
+        font-family: 'Roboto';
+        font-weight: 400;
+        line-height: 4px;
+        margin-top: 13px;
+    }
+    .nama img {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid;
+        border-color: #ff1f57;
+        transition: 0.5s;
+        position: relative;
+    }
+    .nama h1 {
+        color: #ffac42;
+        margin-top: 15px;
+        position: relative;
+        font-family: 'wild world';
+        font-size: 17px;
+        opacity: 0;
+        animation: fadeIn 1.5s ease-in-out forwards;
+    }
+    .nama h3 {
+        position: relative;
+        margin-top: 20px;
+    }
+    .about h1{
+        font-size: 15px;
+    }
+    .about h3 {
+        font-size: 12px;
+    }
+  }
+/*  ABOUT  */
