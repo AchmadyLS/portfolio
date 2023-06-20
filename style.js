@@ -40,7 +40,7 @@ function handleScroll() {
       } else if (window.scrollY >= 220) {
         element.style.borderBottomLeftRadius = '0';
         element.style.borderBottomRightRadius = '0';
-        element.style.bottom = '555px';
+        element.style.bottom = '91vh';
       } else {
         element.style.borderBottomLeftRadius = '50%';
         element.style.borderBottomRightRadius = '50%';
@@ -61,53 +61,18 @@ window.addEventListener('scroll', function() {
   }
 });
 
-var currentCard = 2;
-function moveLeft() {
-  if (currentCard === 1) {
-    return;
-  }
-  var current = document.getElementById("card" + currentCard);
-  var prev = document.getElementById("card" + (currentCard - 1));
-
-  current.style.transform = "translateX(100%)";
-  prev.style.transform = "translateX(0)";
-
-  setTimeout(function() {
-    current.style.visibility = "hidden";
-    current.style.opacity = "0";
-    current.style.pointerEvents = "none";
-
-    prev.style.visibility = "visible";
-    prev.style.opacity = "1";
-    prev.style.pointerEvents = "auto";
-  }, 250);
-
-  currentCard--;
-}
-
-function moveRight() {
-  if (currentCard === 3) {
-    return;
+  function showProgram() {
+    var penutup = document.querySelector('.penutup-pilihan');
+    penutup.classList.remove('slide-right');
+    penutup.classList.add('slide-left');
   }
 
-  var current = document.getElementById("card" + currentCard);
-  var next = document.getElementById("card" + (currentCard + 1));
+  function showDesign() {
+    var penutup = document.querySelector('.penutup-pilihan');
+    penutup.classList.remove('slide-left');
+    penutup.classList.add('slide-right');
 
-  current.style.transform = "translateX(-100%)";
-  next.style.transform = "translateX(0)";
-
-  setTimeout(function() {
-    current.style.visibility = "hidden";
-    current.style.opacity = "0";
-    current.style.pointerEvents = "none";
-
-    next.style.visibility = "visible";
-    next.style.opacity = "1";
-    next.style.pointerEvents = "auto";
-  }, 250);
-
-  currentCard++;
-}
+  }
 
 $(window).scroll(function() {
   var scrollY = $(this).scrollTop();

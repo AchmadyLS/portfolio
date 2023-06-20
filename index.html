@@ -36,8 +36,8 @@
             <input type="radio" name="Language" id="JS" onclick="uncheckRadios('Language')"/>
             <label for="JS" style="--color: #ff1f57">JS</label>
 
-            <input type="radio" name="Language" id="NODE.JS" onclick="uncheckRadios('Language')"/>
-            <label for="NODE.JS" style="--color: #ff1f57">NODE.JS</label> 
+            <input type="radio" name="Language" id="C++" onclick="uncheckRadios('Language')"/>
+            <label for="C++" style="--color: #ff1f57">C++</label> 
         </div>
         </div>
 <!-- ABOUT -->
@@ -51,7 +51,7 @@
 <!-- NAVBAR -->
 <div class="navbar hidden">
     <div class="nav-item">
-      <a href="#home">Home</a>
+      <a href="#home">Home</a>>
     </div>
     <div class="nav-item">
       <a href="#about">About</a>
@@ -64,19 +64,23 @@
     </div>
   </div>
 <!--PROJECT -->
+<div class="projectID">
+    <h1>PROJECT</h1>
+</div>
 <div class="project" id="project">
-<div class="project-id">
-    <p><h1>PROJECT</h1></p>
-</div>
-<div class="card-container">
-    <div id="card1" class="card hidden1"></div>
-    <div id="card2" class="card"></div>
-    <div id="card3" class="card hidden3"></div>
-</div>  
-<div class="button-container">
-    <button id="left-button" onclick="moveLeft()">&lt;</button>
-    <button id="right-button" onclick="moveRight()">&gt;</button>
-</div>
+    <div class="card">
+        <div class="switch">
+            <div class="switch-btn">
+            <input type="submit" id="pilihan-program" value="PROGRAM" onclick="showProgram()">
+            <input type="submit" id="pilihan-design" value="DESIGN" onclick="showDesign()">
+            </div>
+            <div class="penutup-pilihan"></div>
+            <p><h4>HTML</h4></p>
+        </div>
+        <div class="showcase">
+            <img src="./pict/discord.jpg">
+        </div>
+    </div>
 </div>
 <!-- Contact Me -->
 <div class="contact" id="contact">
@@ -89,6 +93,7 @@
         <div class="isi" placeholder="Content" contenteditable="true"></div>
     </form>
 </div>
+<!-- FOOTER -->
 
 </body>
 </html>

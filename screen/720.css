@@ -8,14 +8,11 @@
         position: fixed;
         align-items: center;
         flex-direction: row;
-        gap: 40px;
-        top: 32;
-        left: 50%;
+        gap: 8vw;
+        top: 4vh;
+        left: 50vw;
         font-family: 'Roboto';
-        font-size: 22px;
         font-weight: bold;
-        transform: translate(-50%, -50%);
-        padding: 10px 20px;
         z-index: 999;
         transition: opacity 1s ease-in-out;
     }

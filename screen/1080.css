@@ -13,7 +13,7 @@ html {
     background-color: #333333;
     margin: 0;
     padding: 0;
-    height: 100px;
+    height: 100vh;
     scroll-behavior: smooth;
 }
 #home {
@@ -27,8 +27,8 @@ html {
     position: fixed;
     align-items: center;
     flex-direction: row;
-    gap: 190px;
-    top: 37px;
+    gap: 19vw;
+    top: 5vh;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px 20px;
@@ -42,11 +42,10 @@ html {
   }
   
   .nav-item a {
-    
     text-decoration: none;
     color: #ff1f57;
     font-size: 22px;
-    font-family: 'Robot';
+    font-family: 'Roboto';
     font-weight: bold;
     cursor: pointer;
     transition: color 0.35s ease-in-out;
@@ -204,107 +203,100 @@ label:hover {
 /*               ABOUT END                */
 
 /*                PROJECT                 */
-.project {
-  z-index: 1;
-  transition: opacity 0.3s ease-in-out;
-  scroll-margin-top: 20vh;
-}
-.project-id {
+.projectID {
+  margin-top: 470px;
   text-align: center;
-  margin-top: 420px;
-  position: relative;  
 }
-@keyframes project {
-  from {
-      left: 0;
-      right: 0;
-      top: -20px;
-      opacity: 0;
-  }
-  to {
-      left: 0;
-      right: 0;
-      top: 0;
-      opacity: 1;
-  }
-}
-.card-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 740px;
-  height: 360px;
-  margin: 0 auto;
+.project {
+  scroll-margin-top: 32vh;
   position: relative;
-  overflow: hidden;
-  inset: 2px;
+  margin: 0 auto;
+  width: 680px;
+  height: 330px;
+  top: 10px;
 }
 .card {
-  width: 570px;
-  height: 360px;
-  background-color: lightblue;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
   position: absolute;
-  top: 0;
-  transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
+  bottom: 0;
+  right: 0;
+  width:650px;
+  height: 300px;
+  border-radius: 30px;
+  background-color: #ffac42;
 }
-#card2 {
-  background-image: url(/pict/discord.jpg);
-  background-size: cover;
-  object-fit: cover;
-
-}
-
-.hidden1 {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateX(-100%);
-}
-.hidden3 {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateX(100%);
-}
-
-.button-container {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  margin-top: -237px;
-  gap: 580px;
-  animation: panah 1s ease-in-out;
-}
-
-button {
-  font-size: 100px;
-  background: none;
-  border: none;
-  cursor: pointer;
+.switch {
+  position: absolute;
   user-select: none;
-  color: #ff1f57;
-  transition: all 0.2s ease-in-out;
+  right: 32px;
+  top: 10px;
+  width: 420px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: grey;
 }
-button:hover {
-  transform: scale(1.2);
-  color: white;
+.switch-btn {
+  display: flex;
+  position: absolute;
 }
-@keyframes panah {
-  from {
-    gap: 800px;
-    opacity: 0;
-  }
-  to {
-    gap: 580px;
-    opacity: 1;
-  }
+.switch #pilihan-program {
+  opacity: 1;
+  cursor: pointer;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: #ccc;
+  width: 210px;
+  height: 20px;
 }
-
+.switch #pilihan-design {
+  opacity: 1;
+  cursor: pointer;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #ccc;
+  width: 210px;
+  height: 20px;
+}
+.switch .penutup-pilihan {
+  position: absolute;
+  width: 215px;
+  height: 20px;
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  transition: transform 0.5s ease;
+}
+.penutup-pilihan.slide-right {
+  transform: translateX(95%);
+}
+.penutup-pilihan.slide-left {
+  transform: translateX(0%);
+}
+.card h4 {
+  font-weight: 900;
+  font-family: 'roboto';
+}
+.showcase {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  top: -30px;
+  left: -30px;
+  background-color: #1a1a1a;
+  border: 2px solid #ff1f57;
+  border-radius: 10px;
+}
+.showcase img {
+  cursor: pointer;
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  position: relative;
+  filter: grayscale(100%) blur(2px);
+  transition: filter 0.2s ease-in-out;
+}
+.showcase img:hover {
+  filter: grayscale(0%) blur(0px);
+}
 /*             PROEJECT END               */
 
 /*                CONTACT                 */
@@ -319,7 +311,7 @@ button:hover {
 .contact {
   text-align: center;
   margin: 0 auto;
-  margin-top: 300px;
+  margin-top: 250px;
   width: 550px;
   height: 263px;
 }
@@ -334,15 +326,21 @@ button:hover {
 }
 .submit input {
   margin-top: -5px;
-  margin-left: 150px;
-  width: 100px;
+  margin-left: 120px;
+  width: 130px;
   height: 23px;
+  background-color: #ff1f57;
+  transition: all 0.5s;
+  border-radius: 10px;
+}
+.submit input:hover {
+  background-color: greenyellow;
 }
 .perusahaan {
   margin: 0 auto;
   width: 255px;
   height: 20px;
-  display: block;
+  display: flex;
   overflow: hidden;
   align-items: center;
   resize: none;
@@ -366,3 +364,6 @@ button:hover {
   overflow: hidden;
 }
 }
+/*              CONTACT END               */
+
+/*                FOOTER                  */
