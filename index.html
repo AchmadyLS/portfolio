@@ -71,14 +71,52 @@
     <div class="card">
         <div class="switch">
             <div class="switch-btn">
-            <input type="submit" id="pilihan-program" value="PROGRAM" onclick="showProgram()">
-            <input type="submit" id="pilihan-design" value="DESIGN" onclick="showDesign()">
+            <input type="submit" id="pilihan-program" value="PROGRAMMING" onclick="show('program')">
+            <input type="submit" id="pilihan-design" value="DESIGN" onclick="show('design')">
             </div>
             <div class="penutup-pilihan"></div>
-            <p><h4>HTML</h4></p>
+    <div class="bar-container">
+        <div class="html">
+            <h4>HTML</h4>
+                <div class="progress-bar-HTML">
+                    <div class="bar-persen-HTML">
+                    </div>
+                </div>
+        </div>
+        <div class="css">
+            <h4>CSS</h4>
+                <div class="progress-bar-CSS">
+                    <div class="bar-persen-CSS">
+                    </div>
+                </div>
+        </div>
+        <div class="js">
+            <h4>CSS</h4>
+                <div class="progress-bar-JS">
+                    <div class="bar-persen-JS">
+                    </div>
+                </div>
+        </div>
+    <div class="persen-container">
+        <div class="persenHTML"><a style="font-family: sans-serif; font-weight: 600; font-size: 16px;">HTML:</a><a id="persentaseHTML">10.0</a>%</div>
+        <div class="persenCSS"><a style="font-family: sans-serif; font-weight: 600; font-size: 16px;">CSS:</a><a id="persentaseCSS">20.0</a>%</div>
+        <div class="persenJS"><a style="font-family: sans-serif; font-weight: 600; font-size: 16px;">JS:</a><a id="persentaseJS">30.0</a>%</div>
+    </div>
+    <div style="position: relative; top: -40px; text-align: center;">
+        <p>_____________________________________________</p>
+    </div>
+    <div class="next">
+        <p id="namaType" class="project-type">Progamming</p></div>
+        <div class="button">
+        <button onclick="prev()">&lt</button>
+        <button onclick="next()">&gt</button>
+        </div>       
+    </div>
         </div>
         <div class="showcase">
-            <img src="./pict/discord.jpg">
+            <img id="showPict" src="/pict/topup.jpg">
+            <div id="namaProject" class="nama-project">
+            Adybot Topup</div>
         </div>
     </div>
 </div>
