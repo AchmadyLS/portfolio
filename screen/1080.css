@@ -1,4 +1,4 @@
-@media screen and (max-width: 1280px){
+@media screen and (max-width: 9999px){
 @font-face {
     font-family: 'wild world';
     src: url(/font/WILD\ WORLD.otf);
@@ -27,20 +27,22 @@ html {
     position: fixed;
     align-items: center;
     flex-direction: row;
+    opacity: 0;
     gap: 19vw;
     top: 5vh;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 10px 20px;
     z-index: 1;
-    transition: opacity 1s ease-in-out;
+    transition: all 1s ease-in-out;
   }
   
   .nav-item {
     margin-bottom: 10px;
     white-space: nowrap;
+    object-fit: cover;
   }
-  
+
   .nav-item a {
     text-decoration: none;
     color: #ff1f57;
@@ -50,10 +52,9 @@ html {
     cursor: pointer;
     transition: color 0.35s ease-in-out;
   }
-  .nav-item a:hover {
-    color: white;
-  }
+
   .hidden {
+    display: none;
     opacity: 0;
     pointer-events: none;
   }
@@ -72,7 +73,7 @@ html {
   top: 0;
   left: -10;
   right: -10;
-  bottom: 330px;
+  bottom: 53vh;
   border: 2px solid;
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
@@ -97,7 +98,7 @@ html {
     position: relative;
 }
 .nama img:hover {
-    transform: scale(1.11);
+    transform: scale(1.1);
 }
 .nama h1 {
     z-index: 2;
@@ -140,7 +141,6 @@ h3 {
     font-weight: 400;
     line-height: 4px;
     font-size: 20px;
-
 }
 /*                 HEAD END               */
 
@@ -197,8 +197,26 @@ label:hover {
   color: #ffac42;
   left: 0;
   right: 0;
+  width: 900px;
+  height: 300px;
   top: 400px;
+  margin: 0 auto;
   scroll-margin-top: 45vh;
+}
+.about h1 {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+.about h4 {
+  color: white;
+  font-family: 'Robotod';
+  font-weight: 400;
+  font-size: 20px;
+  word-wrap: break-word;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+  animation-delay: 1s;
 }
 /*               ABOUT END                */
 
@@ -206,21 +224,85 @@ label:hover {
 .projectID {
   margin-top: 470px;
   text-align: center;
+  opacity: 1;
+}
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes hide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.projectHP {
+  display: none;
 }
 .project {
-  scroll-margin-top: 32vh;
+  scroll-margin-top: 30vh;
   position: relative;
   margin: 0 auto;
   width: 680px;
   height: 330px;
   top: 10px;
 }
+.rgb {
+  z-index: -1;
+	position: relative;
+  width: 100.7%;
+	height: 101.1%;
+	border-radius: 30px;
+	overflow: hidden;
+}
+.rgb::before {
+	content: '';
+	z-index: 0;
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 100%;
+	height: 100%;
+	transform-origin: bottom right;
+	background: linear-gradient(0deg,transparent,#ff1f57,#ff1f57);
+	animation: animate 2s linear infinite;
+}
+.rgb::after {
+	content: '';
+	z-index: 0;
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 100%;
+	height: 100%;
+	transform-origin: bottom right;
+	background: linear-gradient(0deg,transparent,#ff1f57,#ff1f57);
+	animation: animate 2s linear infinite;
+	animation-delay: 1s;
+}
+@keyframes animate 
+{
+	0%
+	{
+		transform: rotate(0deg);
+	}
+	100%
+	{
+		transform: rotate(360deg);
+	}
+}
 .card {
   position: absolute;
   bottom: 0;
   right: 0;
-  width:650px;
-  height: 300px;
+  width: 652px;
+  height: 302px;
   border-radius: 30px;
   background-color: #ffac42;
 }
@@ -287,6 +369,21 @@ label:hover {
   width: 85%;
   height: 1350%;
 }
+.design {
+  position: absolute;
+  top: 55px;
+  opacity: 0;
+  width: 117%;
+  height: 75%;
+  text-align: center;
+  word-wrap: break-word;
+}
+.design-isi {
+  font-size: 17px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 .html {
   position: relative;
   top: 25px;
@@ -304,9 +401,10 @@ label:hover {
 }
 .bar-persen-HTML {
   height: 100%;
-  width: 0%;
+  width: 19.04%;
   background-color: #ff1f57;
   border-radius: inherit;
+  transition: all 1s ease;
   display: flex;
 }
 .CSS {
@@ -325,9 +423,10 @@ label:hover {
 }
 .bar-persen-CSS {
   height: 100%;
-  width: 0%;
+  width: 76.19%;
   background-color: #ff1f57;
   border-radius: inherit;
+  transition: all 1s ease;
   display: flex;
 }
 .JS {
@@ -347,14 +446,15 @@ label:hover {
 }
 .bar-persen-JS {
   height: 100%;
-  width: 0%;
+  width: 100%;
   background-color: #ff1f57;
   border-radius: inherit;
+  transition: all 1s ease;
   display: flex;
 }
 .persen-container {
   display: flex;
-  gap: 10px;
+  gap: 5px;
   top: -20px;
   font-family: 'Robotod';
   font-weight: 900;
@@ -363,21 +463,21 @@ label:hover {
   position: relative;
 }
 .persenHTML {
-  width: 100px;
+  width: 110px;
   height: 20px;
   text-align: center;
   border: 1px solid #1a1a1a;
   border-radius: 10px;
 }
 .persenCSS {
-  width: 100px;
+  width: 110px;
   height: 20px;
   text-align: center;
   border: 1px solid #1a1a1a;
   border-radius: 10px;
 }
 .persenJS {
-  width: 100px;
+  width: 110px;
   height: 20px;
   text-align: center;
   border: 1px solid #1a1a1a;
@@ -385,6 +485,7 @@ label:hover {
 }
 .showcase {
   position: absolute;
+  align-items: center;
   width: 200px;
   height: 300px;
   top: -30px;
@@ -392,6 +493,16 @@ label:hover {
   background-color: #1a1a1a;
   border: 3px solid #ff1f57;
   border-radius: 10px;
+}
+@keyframes kiri {
+  from {
+    left: -50px;
+    opacity: 0;
+  }
+  to {
+    left: -30;
+    opacity: 1;
+  }
 }
 .showcase img {
   cursor: pointer;
@@ -407,7 +518,22 @@ label:hover {
 .showcase img:hover {
   filter: grayscale(0%) blur(0px);
 }
+.back-project {
+  z-index: 1;
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  top: 45%;
+  width: 100%;
+  height: 30px;
+  background-color: #ff1f57;
+  transition: all 0.2s ease-in-out;
+}
+.showcase:hover .back-project {
+  opacity: 0;
+}
 .nama-project {
+  z-index: 2;
   pointer-events: none;
   position: absolute;
   user-select: none;
@@ -415,18 +541,21 @@ label:hover {
   cursor: pointer;
   font-weight: 900;
   width: 100%;
-  transform: rotateZ(-50deg);
   top: 45%;
-  color: #ffac42;
-  font-size: 25;
+  color: #333333;
+  font-size: 20;
   text-align: center;
   transition: all 0.2s ease-in-out;
 }
 .showcase:hover .nama-project {
+  transform: scale(0.1);
   opacity: 0;
-  transform: rotateZ(0deg);
 }
 .next {
+  position: relative;
+  top: 12px;
+}
+.project-tipe {
   display: flex;
   font-family: 'Robotod';
   font-weight: 900;
@@ -453,10 +582,10 @@ label:hover {
   transform: scale(1.2);
 }
 .barHTML-topup {
-  right: 20%;
+  right: 10%;
 }
 .barCSS-topup {
-  right: 25%;
+  right: 20%;
 }
 .barJS-topup {
   right: 30%;
@@ -497,9 +626,6 @@ label:hover {
   transition: all 0.5s;
   border-radius: 10px;
 }
-.submit input:hover {
-  background-color: greenyellow;
-}
 .perusahaan {
   margin: 0 auto;
   width: 255px;
@@ -507,7 +633,6 @@ label:hover {
   display: flex;
   overflow: hidden;
   align-items: center;
-  resize: none;
   text-align: left;
   border: 1px solid #ccc;
   background-color: #1a1a1a;
@@ -520,7 +645,6 @@ label:hover {
   height: 100px;
   display: block;
   overflow: scroll;
-  resize: none;
   text-align: left;
   border: 1px solid #ccc;
   color: white;

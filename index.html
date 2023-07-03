@@ -43,15 +43,12 @@
 <!-- ABOUT -->
 <div class="about" id="about">
     <p><h1>ABOUT ME</h1></p>
-    <p><h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, dolorem.</h3></p>
-    <p><h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis molestiae sint impedit aperiam dolorum consequatur.</h3></p>
-    <p><h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, reprehenderit.</h3></p>
-    <p><h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3></p>
+    <p><h4>Sejak SMA saya mulai membangun komunitas discord untuk bermain game bersama teman-teman dekat saya. Suatu hari saya sadar bahwa sebagian besar teman saya adalah seller item game. Akhirnya saya berfikir untuk membangun sebuah platform untuk teman-teman saya dapat berjualan. Dari sini lah saya mulai belajar NODE.JS untuk mengisi fitur yang ada di platform saya dengan bot sederhana seperti bot game, music, dan sebuah bot yang dapat mereka gunakan sebagai pihak ketiga agar transaksi mereka aman dari adanya scam.</h4></p>
 </div>
 <!-- NAVBAR -->
-<div class="navbar hidden">
+<div class="navbar">
     <div class="nav-item">
-      <a href="#home">Home</a>>
+      <a href="#home">Home</a>
     </div>
     <div class="nav-item">
       <a href="#about">About</a>
@@ -67,8 +64,19 @@
 <div class="projectID">
     <h1>PROJECT</h1>
 </div>
+<div class="projectHP" id="project">
+    <div class="projectHP-container">
+        <img src="/pict/game.jpg"/>
+        <img src="/pict/topup.jpg"/>
+        <img src="/pict/chatbot.jpg"/>
+        <img src="/pict/sukuna.jpg"/>
+        <img src="/pict/banteng.jpg"/>
+        <img src="/pict/chou.jpg"/>
+    </div>
+</div>
 <div class="project" id="project">
     <div class="card">
+        <div class="rgb"></div>
         <div class="switch">
             <div class="switch-btn">
             <input type="submit" id="pilihan-program" value="PROGRAMMING" onclick="show('program')">
@@ -76,47 +84,53 @@
             </div>
             <div class="penutup-pilihan"></div>
     <div class="bar-container">
+        <div class="design">
+            <p class="design-isi" id="design"><h4></h4></p>
+        </div>
         <div class="html">
-            <h4>HTML</h4>
+            <h4 id="bahasa1">MATH</h4>
                 <div class="progress-bar-HTML">
                     <div class="bar-persen-HTML">
                     </div>
                 </div>
         </div>
         <div class="css">
-            <h4>CSS</h4>
+            <h4 id="bahasa2">DATABASE</h4>
                 <div class="progress-bar-CSS">
                     <div class="bar-persen-CSS">
                     </div>
                 </div>
         </div>
         <div class="js">
-            <h4>CSS</h4>
+            <h4 id="bahasa3">JAVASCRIPT</h4>
                 <div class="progress-bar-JS">
                     <div class="bar-persen-JS">
                     </div>
                 </div>
         </div>
     <div class="persen-container">
-        <div class="persenHTML"><a style="font-family: sans-serif; font-weight: 600; font-size: 16px;">HTML:</a><a id="persentaseHTML">10.0</a>%</div>
-        <div class="persenCSS"><a style="font-family: sans-serif; font-weight: 600; font-size: 16px;">CSS:</a><a id="persentaseCSS">20.0</a>%</div>
-        <div class="persenJS"><a style="font-family: sans-serif; font-weight: 600; font-size: 16px;">JS:</a><a id="persentaseJS">30.0</a>%</div>
+        <div class="persenHTML"><a id="bahasaPersen1" style="font-family: sans-serif; font-weight: 600; font-size: 16px;">MATH:</a><a id="persentase1">19.04</a>%</div>
+        <div class="persenCSS"><a id="bahasaPersen2" style="font-family: sans-serif; font-weight: 600; font-size: 16px;" id="bahasaPersen2">DB:</a><a id="persentase2">76.19</a>%</div>
+        <div class="persenJS"><a id="bahasaPersen3" style="font-family: sans-serif; font-weight: 600; font-size: 16px;" id="bahasaPersen3">JS:</a><a id="persentase3">100.00</a>%</div>
     </div>
     <div style="position: relative; top: -40px; text-align: center;">
         <p>_____________________________________________</p>
+    </div>       
     </div>
     <div class="next">
+    <div class="project-tipe">
         <p id="namaType" class="project-type">Progamming</p></div>
         <div class="button">
-        <button onclick="prev()">&lt</button>
-        <button onclick="next()">&gt</button>
-        </div>       
+        <button id="prev" disabled onclick="prev()">&lt</button>
+        <button id="next" onclick="next()">&gt</button>
+        </div>
     </div>
+
         </div>
         <div class="showcase">
-            <img id="showPict" src="/pict/topup.jpg">
-            <div id="namaProject" class="nama-project">
-            Adybot Topup</div>
+            <div class="back-project"></div>
+            <img class="gambar" id="showPict" src="/pict/game.jpg">
+            <div id="namaProject" class="nama-project">Discord Game</div>
         </div>
     </div>
 </div>
